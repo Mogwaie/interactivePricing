@@ -1,0 +1,464 @@
+/* body */
+body
+{
+    background-image: url(images/bg-pattern.svg); 
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: hsl(230, 100%, 99%);
+    font-family: "manrope", sans-serif;
+    font-size: 15px;
+    font-weight:600;
+    color: hsl(225, 20%, 60%);  
+    width: 100%;  
+}
+
+
+.header-pricing-range
+{
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    font-weight: 600;
+}
+
+@media all and (min-device-width : 600px) and (max-width: 1124px)
+{
+    body
+    {
+        min-height: 150vh;
+    }   
+}
+
+@media all and (max-width: 533px)
+{
+    .header-pricing-range
+    {
+        font-size: 9.7px;
+    }
+}
+
+/* picture */
+#cercle-picture
+{
+    position: relative;
+    bottom: 8.9em;
+    right: 0.3em;
+    z-index: -1;
+}
+
+h1{
+    color: hsl(227, 35%, 25%);
+}
+
+/* card */
+main
+{
+    background-color: white;
+    width: 520px; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 13px hsl(223, 50%, 87%);
+}
+
+@media all and (max-width: 533px)
+{ 
+    main
+    {
+        width: 80%;
+    }  
+}
+
+section
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+@media all and (max-width: 533px)
+{
+    .pageview-and-price
+    {
+        flex-direction: column;
+    }
+
+    section
+    {
+        padding-left: 0em;
+        padding-right: 0em;
+        padding: 0px;
+    }
+
+    section.pageview-and-price
+    {
+        padding-top: 0;
+    }
+
+    .pv
+    {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+/* pageview and price */
+.pageview-and-price
+{
+    align-items: center;
+    padding-top: 2em;
+}
+
+.pv p
+{
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+}
+
+.cost
+{
+    color:  hsl(227, 35%, 25%);
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.cost-time
+{
+    display: flex;
+    align-items: center;
+}
+
+.phone
+{
+    display: none;
+}
+
+@media all and (max-width: 533px)
+{
+    .cost-time
+    {
+        display: none;
+    }
+
+    .discount
+    {
+        display: none;
+    }
+
+    .phone
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    p.discount.phone
+    {
+        padding-top: 2px;
+    }
+
+    .billing p 
+    {
+        font-size: 10px;
+    }
+
+    .range-slide-bar
+    {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+}
+/* slider */
+.range-slide-bar
+{
+    display: block;
+}
+
+.range
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.range input[type="range"] 
+{
+    width: 100%;
+    height: 9px;
+    border-radius: 5px;
+    background: hsl(224, 65%, 95%);  
+    /*-moz-appearance: none; firefox  */
+    /*-webkit-appearance: none; /*chrome & safari*/
+    appearance: none; 
+}
+
+/* Chrome & safari */
+
+.range input[type="range"]::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: hsl(174, 86%, 45%); 
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    box-shadow: 0 9px 13px 5px hsl(174, 77%, 80%);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.range input[type="range"]::-webkit-slider-thumb:hover
+{
+    background: hsl(174, 79%, 63%);
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+.range input[type="range"]::-webkit-slider-thumb:active
+{
+    background:hsl(174, 97%, 29%);
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+/* Firefox */
+.range input[type="range"]::-moz-range-thumb
+{
+    -moz-appearance: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: hsl(174, 77%, 80%); 
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    box-shadow: 0 9px 13px 1px hsl(174, 77%, 80%);
+    cursor: pointer;
+    border: 0;
+}
+
+.range input[type="range"]::-moz-range-thumb:hover
+{
+    background: hsl(174, 86%, 45%);
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+.range input[type="range"]::-webkit-slider-thumb:active
+{
+    background:hsl(174, 97%, 29%);
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+#progressBar
+{
+    width: 50%;
+    height: 9px;
+    background: hsl(174, 77%, 80%);
+    border-radius: 5px;
+    position: relative;
+    justify-content: center;
+    bottom: 0.7em;
+    z-index: 0;
+}
+
+/* billing & toggle */
+.billing
+{
+    display: flex;
+    justify-content: flex-end;
+    font-size: small;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+}
+
+.discount
+{
+    color:hsl(15, 100%, 70%);
+    background: hsl(14, 92%, 95%);
+    border-radius: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    padding-top: 4px;
+    margin-left: 10px;
+    margin-right: 20px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.switch
+{
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    top: 9px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.switch input {
+    position: absolute;
+    top: -30px; 
+    left: -30px;
+    width: 0;
+    height: 0;
+}
+
+.switch input + .slider-round
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: hsl(223, 50%, 87%);
+    border-radius: 20px;
+}
+
+.switch input:checked + .slider-round
+{
+    background: hsl(174, 77%, 80%);
+}
+
+.switch input + .slider-round::before
+{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: all .5s;
+}
+
+.switch input:checked + .slider-round::before
+{
+    left: 22px;
+} 
+
+/* footer */
+
+section.footer-card
+{
+    padding-left: 12px;
+}
+
+.footer-card
+{
+    display: flex;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    border-top:solid 1px hsl(223, 50%, 87%);
+}
+
+.image-check
+{
+    padding-top: 1em;
+}
+
+.check-and-text
+{
+    font-size: small;
+    font-weight: 600;
+    display: flex;
+    line-height: 1.5em;
+} 
+
+ul
+{
+    list-style-type: none;
+}
+
+li img{
+    padding-right: 10px;
+}
+
+/* button start my trial */
+.footer-card a
+{
+    font-size: small;
+    font-weight: 600;
+    border-radius: 30px;
+    border-bottom: solid hsl(227, 35%, 25%);
+    background: 3px hsl(227, 35%, 25%);
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    color: hsl(226, 100%, 87%);  
+}
+
+.start-my-trial-button
+{
+    display: block;
+    margin: auto;
+    margin-right: 0;
+    
+}
+
+.footer-card a:hover
+{
+    color: white;
+}
+ 
+@media all and (max-width: 533px)
+{
+    .footer-card
+    {
+        flex-direction: column;
+        justify-content: center; 
+        text-align: center;
+    }
+
+    .check-and-text
+    {
+        justify-content: center;
+        padding-right: 3em;
+    }
+    
+    .start-my-trial-button
+    {
+        margin: auto;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    .footer-card a
+    {
+        padding-right: 2.5em;
+        padding-left: 2.5em;
+    }
+}

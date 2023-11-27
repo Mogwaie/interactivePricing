@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Challenge interactive pricing</title>
+    </head>
+
+    <body>
+        <div class="header-pricing-range"> 
+            <h1>Simple, traffic-based pricing</h1>
+            <p>Sign-up for our 30-day trial. No credit card required.</p>
+            <img src="images/pattern-circles.svg" alt="Cercles design behind the top text" id="cercle-picture">
+            <!-- alt in english because website in english -->
+        </div>
+        <main>
+            <section class="pageview-and-price">
+                <div class="pv">
+                    <p><span id="viewer">100K </span>PAGEVIEWS</p>
+                </div>
+
+                <div class="cost-time">
+                    <p class="cost">$<span id="price">16</span>.00</p>
+                    <p>/month</p>
+                </div>
+            </section>
+
+            <section class="range-slide-bar">
+                <div class="range">
+                    <input type="range" id="rangeSlider" min="0" max="4" value="2" > 
+                </div>
+                <div id="progressBar"></div> 
+            </section>
+                 
+            <section class="pageview-and-price">
+                <div class="cost-time phone">
+                    <p class="cost">$<span id="pricePhone">16</span>.00</p>
+                    <p>/month</p>
+                </div>
+            </section>
+
+            <section class="billing">
+                <p>Monthly Billing</p>
+                <label class="switch">
+                    <input type="checkbox" id="toggle">
+                    <span class="slider-round"></span>
+                </label>
+                
+                <p>Yearly Billing</p>
+                <p class="discount">25% discount</p>
+                <p class="discount phone">- 25%</p>
+            </section>
+
+            <section class="footer-card">
+
+                <div class="check-and-text">
+                    <ul>
+                        <li><img src="images/icon-check.svg" alt="icon check to confirm the statement" class="image-check">Unlimited websites</li>
+                        <li><img src="images/icon-check.svg" alt="icon check to confirm the statement" class="image-check">100% data ownership</li>
+                        <li><img src="images/icon-check.svg" alt="icon check to confirm the statement" class="image-check">Email reports</li>
+                    </ul>
+                </div>
+                
+                <div class="start-my-trial-button">
+                    <a href="#">Start my trial</a>
+                    <!-- or use a submit button -->
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
